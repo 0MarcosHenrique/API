@@ -10,7 +10,7 @@ app.post('/users', (req, res)=> {
     
     users.push(req.body)
 
-    res.send('ok, post deu certin')
+    res.send('Ok, post deu certin.')
 })
 
 app.get('/users', (req, res) => {
