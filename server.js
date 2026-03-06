@@ -2,16 +2,19 @@ import express from 'express'
 
 const app = express()
 
+app.use(express.json())
+
 const users = []
 
 app.post('/users', (req, res)=> {
-    console.log(req)
+    
+    users.push(req.body)
 
     res.send('ok, post deu certin')
 })
 
 app.get('/users', (req, res) => {
-    res.send("")
+    res.json(users)
 })
 
 app.listen(3000)
