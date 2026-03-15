@@ -1,3 +1,4 @@
+markdown
 # 📦 User Registration API
 
 ![Node.js](https://img.shields.io/badge/Node.js-18.x-green)
@@ -92,7 +93,6 @@ json
   "password": "your_password",
   "age": "25"
 }
-
 📋 Get all users
 Method: GET
 
@@ -118,7 +118,6 @@ json
   "name": "John Updated",
   "age": "26"
 }
-
 🗑️ Delete a user
 Method: DELETE
 
@@ -130,7 +129,6 @@ json
 {
   "message": "User successfully deleted"
 }
-
 📦 Database Schema (Prisma)
 The data structure is defined in prisma/schema.prisma:
 
@@ -149,9 +147,12 @@ A simple test script (teste.js) is included to verify the connection to MongoDB:
 
 bash
 node teste.js
-Expected output: ✅ CONECTOU NO MONGO COM SUCESSO!
+Expected output:
 
+text
+✅ CONECTOU NO MONGO COM SUCESSO!
 📁 Project Structure
+text
 API/
 ├── node_modules/          # Project dependencies
 ├── prisma/
@@ -164,8 +165,6 @@ API/
 ├── server.js              # Main API application file
 ├── teste.js               # Script to test DB connection
 └── README.md              # Project documentation (you are here!)
-
-
 🧠 The Journey: From Bugs to a Working API
 This project was more than just coding; it was a true debugging adventure. Here are some of the major battles fought and won:
 
@@ -183,7 +182,7 @@ This project was more than just coding; it was a true debugging adventure. Here 
 
 🔐 Securing the Future: Laid the groundwork for future security by understanding and preparing for password encryption.
 
-This journey transformed "Let´s started" moments into a solid, functional API.
+This journey transformed initial "socorro KKKK" moments into a solid, functional API.
 
 🗺️ Roadmap / Future Improvements
 Implement Security: Add password hashing with bcrypt.
@@ -208,7 +207,7 @@ Marcos Henrique (0MarcosHenrique)
 Built with ❤️, JavaScript, and a whole lot of debugging (RIP Prisma errors).
 
 📄 License
-This project is licensed under the MIT License.
+This project is licensed under the ISC License.
 
 🙏 Acknowledgements
 Stack Overflow and the developer community for the endless knowledge base.
