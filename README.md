@@ -1,4 +1,4 @@
-markdown
+
 # 📦 User Registration API
 
 ![Node.js](https://img.shields.io/badge/Node.js-18.x-green)
