@@ -1,4 +1,3 @@
-
 # 📦 User Registration API
 
 ![Node.js](https://img.shields.io/badge/Node.js-18.x-green)
@@ -28,12 +27,12 @@ Developed to integrate with a React Front-End, this project represents a complet
 ## 🛠️ Tech Stack
 
 | Technology | Version |
-| :--- | :--- |
-| Node.js | 18.x / 24.x |
-| Express | 5.x |
-| Prisma | 5.22.0 |
-| MongoDB | 7.x |
-| CORS | ^2.8.6 |
+|------------|---------|
+| Node.js    | 18.x / 24.x |
+| Express    | 5.x      |
+| Prisma     | 5.22.0   |
+| MongoDB    | 7.x      |
+| CORS       | ^2.8.6   |
 
 ---
 
@@ -47,10 +46,10 @@ Developed to integrate with a React Front-End, this project represents a complet
 
 ### Installation & Setup
 
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/0MarcosHenrique/API.git
-    cd API
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/0MarcosHenrique/API.git
+   cd API
 Install dependencies
 
 bash
@@ -72,14 +71,16 @@ Run the server
 
 bash
 node server.js
-# Or for development with auto-reload:
+Or for development with auto-reload:
+
+bash
 npx nodemon server.js
 The API will be available at http://localhost:3000 🚀
 
-📡 API Endpoints
-Here’s how to interact with the API. All endpoints are relative to http://localhost:3000.
-
-➕ Create a user
+### 📡 API Endpoints
+Here's how to interact with the API. All endpoints are relative to http://localhost:3000.
+---
+### ➕ Create a user
 Method: POST
 
 Endpoint: /users
@@ -87,13 +88,14 @@ Endpoint: /users
 Body (JSON):
 
 json
-{
-  "email": "user@example.com",
-  "name": "John Doe",
-  "password": "your_password",
-  "age": "25"
-}
-📋 Get all users
+{<br>
+  "email": "user@example.com",<br>
+  "name": "John Doe",<br>
+  "password": "your_password",<br>
+  "age": "25"<br>
+<br>}
+---
+### 📋 Get all users
 Method: GET
 
 Endpoint: /users
@@ -104,8 +106,9 @@ Method: GET
 Endpoint: /users?name=John&email=user@example.com&age=25
 
 Note: You can filter by name, email, password, and age using query parameters.
+---
 
-✏️ Update a user
+### ✏️ Update a user
 Method: PUT
 
 Endpoint: /users/:id
@@ -113,12 +116,14 @@ Endpoint: /users/:id
 Body (JSON): (Include only the fields you want to update)
 
 json
-{
-  "email": "newemail@example.com",
-  "name": "John Updated",
-  "age": "26"
-}
-🗑️ Delete a user
+{ <br>
+  "email": "newemail@example.com",<br>
+  "name": "John Updated",<br>
+  "age": "26"<br>
+<br>}
+---
+
+### 🗑️ Delete a user
 Method: DELETE
 
 Endpoint: /users/:id
@@ -129,43 +134,44 @@ json
 {
   "message": "User successfully deleted"
 }
-📦 Database Schema (Prisma)
+---
+
+### 📦 Database Schema (Prisma)
 The data structure is defined in prisma/schema.prisma:
 
 prisma
-model User {
-  id       String @id @default(auto()) @map("_id") @db.ObjectId
-  email    String @unique
-  name     String
-  password String?
-  age      String
-}
-💡 Note: The password field is currently optional (?) for development flexibility. For production use, it's strongly recommended to hash passwords (e.g., with bcrypt) and make the field mandatory.
-
+model User {<br>
+  id       String @id @default(auto()) @map("_id") @db.ObjectId<br>
+  email    String @unique<br>
+  name     String<br>
+  password String?<br>
+  age      String<br>
+<br>}
+### 💡 Note: The password field is currently optional (?) for development flexibility. For production use, it's strongly recommended to hash passwords (e.g., with bcrypt) and make the field mandatory.
+---
 🧪 Testing the Connection
 A simple test script (teste.js) is included to verify the connection to MongoDB:
 
 bash
 node teste.js
-Expected output:
+Expected output: ✅ CONECTOU NO MONGO COM SUCESSO!
+---
 
-text
-✅ CONECTOU NO MONGO COM SUCESSO!
-📁 Project Structure
-text
-API/
-├── node_modules/          # Project dependencies
-├── prisma/
-│   └── schema.prisma      # Database schema definition
-├── .env                   # Environment variables (not in repo)
-├── .gitattributes         # Git settings
-├── .gitignore              # Files ignored by Git
-├── package-lock.json      # Locked dependency versions
-├── package.json           # Project metadata and dependencies
-├── server.js              # Main API application file
-├── teste.js               # Script to test DB connection
-└── README.md              # Project documentation (you are here!)
-🧠 The Journey: From Bugs to a Working API
+### 📁 Project Structure<br>
+API/<br>
+├── node_modules/        &nbsp;&nbsp;  #Project dependencies<br>
+├── prisma/<br>
+│   └── schema.prisma     &nbsp; #Database schema definition<br>
+├── .env                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #Environment variables (not in repo)<br>
+├── .gitattributes        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;#Git settings<br>
+├── .gitignore            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #Files ignored by Git<br>
+├── package-lock.json     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#Locked dependency versions<br>
+├── package.json         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#Project metadata and dependencies<br>
+├── server.js             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#Main API application file<br>
+├── teste.js               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#Script to test DB connection<br>
+└── README.md              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#Project documentation (you are here!)<br>
+---
+### 🧠 The Journey: From Bugs to a Working API
 This project was more than just coding; it was a true debugging adventure. Here are some of the major battles fought and won:
 
 ⚔️ The Great Prisma Migration: Faced with version conflicts between Prisma 5 and 6, which broke the connection configuration.
@@ -182,9 +188,9 @@ This project was more than just coding; it was a true debugging adventure. Here 
 
 🔐 Securing the Future: Laid the groundwork for future security by understanding and preparing for password encryption.
 
-This journey transformed initial "socorro KKKK" moments into a solid, functional API.
-
-🗺️ Roadmap / Future Improvements
+This journey transformed initial "let's go" moments into a solid, functional API.
+---
+### 🗺️ Roadmap / Future Improvements
 Implement Security: Add password hashing with bcrypt.
 
 Add Authentication: Create login routes and issue JWT tokens.
@@ -200,16 +206,18 @@ Dockerize: Create a Dockerfile and docker-compose.yml for easy setup.
 Write Tests: Add unit and integration tests.
 
 Deploy: Deploy the API to a cloud platform like Render, Railway, or AWS.
+---
 
-🧑‍💻 Author
+### 🧑‍💻 Author
 Marcos Henrique (0MarcosHenrique)
-
 Built with ❤️, JavaScript, and a whole lot of debugging (RIP Prisma errors).
+---
 
-📄 License
+###📄 License
 This project is licensed under the ISC License.
+---
 
-🙏 Acknowledgements
+### 🙏 Acknowledgements
 Stack Overflow and the developer community for the endless knowledge base.
 
 MongoDB Atlas for the free database tier.
