@@ -4,7 +4,7 @@
 ![Express](https://img.shields.io/badge/Express-5.x-blue)
 ![Prisma](https://img.shields.io/badge/Prisma-5.x-purple)
 ![MongoDB](https://img.shields.io/badge/MongoDB-7.x-brightgreen)
-![License](https://img.shields.io/badge/License-ISC-yellow)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
 A robust and secure RESTful API for user registration, built with **Node.js**, **Express**, **Prisma**, and **MongoDB**. This API supports full CRUD operations and is designed with best practices for future scalability.
 
